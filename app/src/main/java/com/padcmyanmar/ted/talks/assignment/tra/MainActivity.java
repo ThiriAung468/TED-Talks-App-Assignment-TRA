@@ -4,10 +4,14 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.padcmyanmar.ted.talks.assignment.tra.adapters.TedAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        RecyclerView rvTed = findViewById(R.id.rv_ted_talks);
+        TedAdapter tedAdapter = new TedAdapter();
+        rvTed.setAdapter(tedAdapter);
+        rvTed.setLayoutManager(new LinearLayoutManager(getApplicationContext(),
+                LinearLayoutManager.VERTICAL,
+                false));
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
