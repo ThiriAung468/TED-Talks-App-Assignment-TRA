@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_more_vert_grey_28dp"
         android:layout_toRightOf="@id/tv_ted_talks"
-        android:layout_marginLeft="230dp"
+        android:layout_marginLeft="220dp"
         android:layout_marginTop="@dimen/margin_medium"
         />
     <ImageView
@@ -49,7 +49,7 @@
         android:textSize="@dimen/text_small"
         android:textColor="#FFFFFF"
         android:layout_marginLeft="@dimen/margin_medium_3"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="280dp"
        />
     <TextView
         android:id="@+id/tv_say_topic"
@@ -70,7 +70,7 @@
         android:textSize="@dimen/text_small"
         android:layout_toRightOf="@id/tv_people_name"
         android:layout_marginLeft="210dp"
-        android:layout_marginTop="307dp"/>
+        android:layout_marginTop="315dp"/>
     <ImageView
         android:id="@+id/iv_more_vert"
         android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
         android:src="@drawable/ic_more_vert_write_24dp"
         android:layout_toRightOf="@id/tv_people_name"
         android:layout_marginLeft="220dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="280dp"
 
         />
 
