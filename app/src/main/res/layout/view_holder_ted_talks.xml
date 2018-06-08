@@ -2,36 +2,84 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_ted_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ted_logo_size"
+        android:src="@drawable/ted_logo"
+        android:layout_marginStart="@dimen/margin_medium"
+
+       />
     <TextView
         android:id="@+id/tv_ted_talks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TED Talks"
+        android:text="Talks"
         android:textSize="@dimen/text_regular_3x"
         android:textColor="#ff0000"
+        android:layout_toRightOf="@id/iv_ted_logo"
         android:layout_marginLeft="@dimen/margin_medium"
         android:layout_marginTop="@dimen/margin_medium"
-        android:layout_marginBottom="@dimen/margin_medium_2"/>
+       />
     <ImageView
-        android:id="@+id/iv_news_placeholder"
+        android:id="@+id/iv_more_vert_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_more_vert_grey_28dp"
+        android:layout_toRightOf="@id/tv_ted_talks"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        />
+    <ImageView
+        android:id="@+id/iv_ted_talks_img"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:src="@drawable/img_news_placeholder"
+        android:src="@drawable/ted_talks_img"
         android:layout_below="@id/tv_ted_talks"
         android:scaleType="centerCrop"
         android:layout_marginLeft="@dimen/margin_medium"
         android:layout_marginRight="@dimen/margin_medium"
-        android:layout_marginBottom="@dimen/margin_medium_2"/>
-
+        android:layout_marginTop="@dimen/margin_medium_2"
+       />
+    <TextView
+        android:id="@+id/tv_people_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cameron Russell"
+        android:textSize="@dimen/text_small"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="@dimen/margin_medium_3"
+        android:layout_marginTop="270dp"
+       />
+    <TextView
+        android:id="@+id/tv_say_topic"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Looks aren't everything. Believe me, I'm a model."
+        android:textSize="@dimen/text_regular_2x"
+        android:textColor="#FFFFFF"
+        android:layout_alignLeft="@id/tv_people_name"
+        android:layout_below="@id/tv_people_name"
+        />
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14:05"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/text_small"
+        android:layout_toRightOf="@id/tv_people_name"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="307dp"/>
     <ImageView
-        android:id="@+id/iv_placeholder"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:src="@drawable/news_placeholder1"
-        android:layout_below="@id/iv_news_placeholder"
-        android:scaleType="centerCrop"
-        android:layout_marginLeft="@dimen/margin_medium"
-        android:layout_marginRight="@dimen/margin_medium"
-        android:layout_marginBottom="@dimen/margin_medium_2"/>
+        android:id="@+id/iv_more_vert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_more_vert_write_24dp"
+        android:layout_toRightOf="@id/tv_people_name"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="272dp"
+
+        />
 
 </RelativeLayout>

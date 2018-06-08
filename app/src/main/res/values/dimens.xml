@@ -33,5 +33,6 @@
 
     <!--App specific-->
     <dimen name="publication_logo_size">120dp</dimen>
+    <dimen name="ted_logo_size">40dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 </resources>
