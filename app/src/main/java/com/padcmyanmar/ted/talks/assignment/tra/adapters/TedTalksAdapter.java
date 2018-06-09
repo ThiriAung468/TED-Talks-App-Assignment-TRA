@@ -8,14 +8,12 @@ import android.view.ViewGroup;
 
 import com.padcmyanmar.ted.talks.assignment.tra.R;
 import com.padcmyanmar.ted.talks.assignment.tra.delegates.TedTalksItemDelegate;
-import com.padcmyanmar.ted.talks.assignment.tra.viewholders.TedViewHolder;
+import com.padcmyanmar.ted.talks.assignment.tra.viewholders.TedTalksViewHolder;
 
-import java.util.Objects;
-
-public class TedAdapter extends RecyclerView.Adapter {
+public class TedTalksAdapter extends RecyclerView.Adapter {
 
     private TedTalksItemDelegate mTedTalksItemDelegate;
-    public TedAdapter(TedTalksItemDelegate tedTalksItemDelegate){
+    public TedTalksAdapter(TedTalksItemDelegate tedTalksItemDelegate){
         mTedTalksItemDelegate =  tedTalksItemDelegate;
     }
 
@@ -25,7 +23,7 @@ public class TedAdapter extends RecyclerView.Adapter {
 
         LayoutInflater layoutInflater =  LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.view_holder_ted_talks,parent,false);
-        return new TedViewHolder(view,mTedTalksItemDelegate);
+        return new TedTalksViewHolder(view,mTedTalksItemDelegate);
     }
 
     @Override

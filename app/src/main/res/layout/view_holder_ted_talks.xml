@@ -2,40 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <ImageView
-        android:id="@+id/iv_ted_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/ted_logo_size"
-        android:src="@drawable/ted_logo"
-        android:layout_marginStart="@dimen/margin_medium"
 
-       />
-    <TextView
-        android:id="@+id/tv_ted_talks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Talks"
-        android:textSize="@dimen/text_regular_3x"
-        android:textColor="#ff0000"
-        android:layout_toRightOf="@id/iv_ted_logo"
-        android:layout_marginLeft="@dimen/margin_medium"
-        android:layout_marginTop="@dimen/margin_medium"
-       />
-    <ImageView
-        android:id="@+id/iv_more_vert_setting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_more_vert_grey_28dp"
-        android:layout_toRightOf="@id/tv_ted_talks"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="@dimen/margin_medium"
-        />
+
     <ImageView
         android:id="@+id/iv_ted_talks_img"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:src="@drawable/ted_talks_img"
-        android:layout_below="@id/tv_ted_talks"
         android:scaleType="centerCrop"
         android:layout_marginLeft="@dimen/margin_medium"
         android:layout_marginRight="@dimen/margin_medium"
@@ -49,7 +22,7 @@
         android:textSize="@dimen/text_regular"
         android:textColor="#FFFFFF"
         android:layout_marginLeft="@dimen/margin_medium_3"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="250dp"
        />
     <TextView
         android:id="@+id/tv_say_topic"
@@ -71,7 +44,7 @@
         android:textSize="@dimen/text_small"
         android:layout_toRightOf="@id/tv_people_name"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="315dp"/>
+        android:layout_marginTop="290dp"/>
     <ImageView
         android:id="@+id/iv_more_vert"
         android:layout_width="wrap_content"
@@ -79,7 +52,7 @@
         android:src="@drawable/ic_more_vert_write_24dp"
         android:layout_toRightOf="@id/tv_people_name"
         android:layout_marginLeft="210dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="250dp"
 
         />
 

@@ -6,15 +6,15 @@ import android.view.View;
 import com.padcmyanmar.ted.talks.assignment.tra.R;
 import com.padcmyanmar.ted.talks.assignment.tra.delegates.TedTalksItemDelegate;
 
-public class TedViewHolder extends RecyclerView.ViewHolder {
+public class TedTalksViewHolder extends RecyclerView.ViewHolder {
     private TedTalksItemDelegate mTedTalksItemDelegate;
-    public TedViewHolder(View itemView,TedTalksItemDelegate tedTalksItemDelegate) {
+    public TedTalksViewHolder(View itemView, TedTalksItemDelegate tedTalksItemDelegate) {
         super(itemView);
         mTedTalksItemDelegate = tedTalksItemDelegate;
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mTedTalksItemDelegate.onTapImage();
+                mTedTalksItemDelegate.onTapItemView();
             }
         });
 

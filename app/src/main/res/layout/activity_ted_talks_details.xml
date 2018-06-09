@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cameron Russell"
-                android:textSize="@dimen/text_regular"
+                android:textSize="@dimen/text_regular_2x"
                 android:textColor="@color/primary_text"
                 android:layout_marginTop="@dimen/margin_medium_3"
                 android:layout_marginLeft="@dimen/margin_medium_2"/>
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Where joy hides and how to find it"
-                android:textSize="@dimen/text_regular_2x"
+                android:textSize="@dimen/text_regular_3x"
                 android:textColor="@color/primary_text"
                 android:textStyle="bold"
                 android:layout_alignLeft="@id/tv_people_name_details"
@@ -152,10 +152,10 @@
                 android:id="@+id/tv_ted_talks_details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Author Steven Johnson has spent his career probing the confluence of technology, science and the experience of the user. His insights are more relevant than ever as technology becomes increasingly ubiquitous, thereby changing the way we live and think. Idea creation is the focus of his TED talk, which is a concept on the mind of most marketers.
-Author Steven Johnson has spent his career probing the confluence of technology, science and the experience of the user. His insights are more relevant than ever as technology becomes increasingly ubiquitous, thereby changing the way we live and think. Idea creation is the focus of his TED talk, which is a concept on the mind of most marketers."
+                android:text="Author Steven Johnson has spent his career probing the confluence of technology, science and the experience of the user. His insights are more relevant than ever as technology becomes increasingly ubiquitous, thereby changing the way we live and think. Idea creation is the focus of his TED talk, which is a concept on the mind of most marketers."
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/text_regular_2x"
+                android:lineSpacingMultiplier="1.2"
                 android:layout_marginLeft="@dimen/margin_medium_2"
                 android:layout_marginTop="@dimen/margin_medium_2"
                 android:layout_marginRight="@dimen/margin_medium_2"
@@ -169,7 +169,112 @@ Author Steven Johnson has spent his career probing the confluence of technology,
                 android:textColor="@color/secondary_text"
                 android:layout_alignLeft="@id/tv_ted_talks_details"
                 android:layout_below="@id/tv_ted_talks_details"
+                android:layout_marginBottom="@dimen/margin_medium"
+                />
 
+            <View
+                android:id="@+id/v_linebreak"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider"
+                android:layout_below="@id/tv_italic_letter"
+                android:layout_margin="@dimen/margin_medium_2"
+                />
+            <TextView
+                android:id="@+id/tv_ted_talks_free_italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TED Talks are free thanks to support from"
+                android:textStyle="italic"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_small"
+                android:layout_below="@id/v_linebreak"
+                android:layout_centerHorizontal="true"
+                />
+
+            <View
+                android:id="@+id/v_linebreak2"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/divider"
+                android:layout_below="@id/tv_ted_talks_free_italic"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_xxlarge"
+                android:layout_marginRight="@dimen/margin_xxlarge"
+                />
+
+            <View
+                android:id="@+id/v_linebreak3"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/divider"
+                android:layout_below="@id/v_linebreak2"
+                android:layout_margin="@dimen/margin_medium_2"
+                />
+            <TextView
+                android:id="@+id/tv_about_the_speaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About the speaker"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_regular_3x"
+                android:layout_below="@id/v_linebreak3"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                />
+
+            <ImageView
+                android:id="@+id/iv_speaker_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/speaker_image"
+                android:layout_below="@id/tv_about_the_speaker"
+                android:layout_alignLeft="@id/tv_about_the_speaker"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                />
+            <TextView
+                android:id="@+id/tv_speaker_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cameron Russell"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/iv_speaker_image"
+                android:layout_below="@id/tv_about_the_speaker"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"/>
+            <TextView
+                android:id="@+id/tv_speaker_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Model, writer"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/secondary_text"
+                android:layout_alignLeft="@id/tv_speaker_name"
+                android:layout_below="@id/tv_speaker_name"
+
+                />
+            <TextView
+                android:id="@+id/tv_brief_about_speaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cameron Russell studies joy and reveals how we can fine more of it in the world around us."
+                android:textSize="@dimen/text_regular"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@color/primary_text"
+                android:layout_alignLeft="@id/tv_speaker_position"
+                android:layout_below="@id/tv_speaker_position"
+                android:layout_marginRight="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium"/>
+
+            <View
+                android:id="@+id/v_linebreak4"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/divider"
+                android:layout_below="@id/tv_brief_about_speaker"
+                android:layout_margin="@dimen/margin_medium_2"
                 />
 
             <TextView
@@ -179,11 +284,26 @@ Author Steven Johnson has spent his career probing the confluence of technology,
                 android:text="Watch next"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/text_regular_3x"
-                android:layout_below="@id/tv_italic_letter"
-                android:layout_margin="@dimen/margin_medium_2"
+                android:layout_below="@id/v_linebreak4"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2"
                 />
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_ted_talks_watch_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_watch_next"/>
+
         </RelativeLayout>
+
+
+
+
+
+
+
 
 
     </android.support.v4.widget.NestedScrollView>
