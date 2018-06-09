@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:id="@+id/appbar">
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ted_talks_details_appbar_height"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:contentScrim="@color/primary">
+      <ImageView
+          android:id="@+id/iv_ted_tails_backdrop"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:src="@drawable/ted_talks_img"
+          android:scaleType="centerCrop"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_keyboard_backspace_white_24dp"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"/>
+
+            <ImageView
+                android:id="@+id/iv_more_vert_details_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more_vert_white_28dp"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="330dp"/>
+
+        </RelativeLayout>
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"/>
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/tv_people_name_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cameron Russell"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginLeft="@dimen/margin_medium_2"/>
+
+            <TextView
+                android:id="@+id/tv_say_topic_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Where joy hides and how to find it"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:layout_alignLeft="@id/tv_people_name_details"
+                android:layout_below="@id/tv_people_name_details"/>
+
+            <TextView
+                android:id="@+id/tv_time_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14:05  |"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/secondary_text"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_alignLeft="@id/tv_say_topic_details"
+                android:layout_below="@id/tv_say_topic_details"/>
+
+            <ImageView
+                android:id="@+id/iv_volume_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_volume_up_grey_18dp"
+                android:layout_toRightOf="@id/tv_time_details"
+                android:layout_below="@id/tv_say_topic_details"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+            <TextView
+                android:id="@+id/tv_listen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Listen"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/secondary_text"
+                android:layout_toRightOf="@id/iv_volume_up"
+                android:layout_below="@id/tv_say_topic_details"
+                android:layout_margin="@dimen/margin_small"
+                />
+            <ImageView
+                android:id="@+id/iv_playlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_playlist_add_black_24dp"
+                android:layout_below="@id/tv_time_details"
+                android:layout_alignLeft="@id/tv_time_details"
+                android:layout_marginTop="@dimen/margin_medium"
+                />
+            <ImageView
+                android:id="@+id/iv_favourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_favorite_border_black_24dp"
+                android:layout_toRightOf="@id/iv_playlist"
+                android:layout_below="@id/tv_time_details"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium_2"/>
+
+            <ImageView
+                android:id="@+id/iv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_file_download_black_24dp"
+                android:layout_toRightOf="@id/iv_favourite"
+                android:layout_below="@id/tv_time_details"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium_2"/>
+
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share_black_24dp"
+                android:layout_toRightOf="@id/iv_download"
+                android:layout_below="@id/tv_time_details"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium_2"/>
+
+            <TextView
+                android:id="@+id/tv_ted_talks_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Author Steven Johnson has spent his career probing the confluence of technology, science and the experience of the user. His insights are more relevant than ever as technology becomes increasingly ubiquitous, thereby changing the way we live and think. Idea creation is the focus of his TED talk, which is a concept on the mind of most marketers.
+Author Steven Johnson has spent his career probing the confluence of technology, science and the experience of the user. His insights are more relevant than ever as technology becomes increasingly ubiquitous, thereby changing the way we live and think. Idea creation is the focus of his TED talk, which is a concept on the mind of most marketers."
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_regular_2x"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginRight="@dimen/margin_medium_2"
+                android:layout_below="@id/iv_download"/>
+            <TextView
+                android:id="@+id/tv_italic_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TED2018,Filmed Apr 2018"
+                android:textStyle="italic"
+                android:textColor="@color/secondary_text"
+                android:layout_alignLeft="@id/tv_ted_talks_details"
+                android:layout_below="@id/tv_ted_talks_details"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_watch_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Watch next"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_regular_3x"
+                android:layout_below="@id/tv_italic_letter"
+                android:layout_margin="@dimen/margin_medium_2"
+                />
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fav_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play_arrow_white_32dp"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="right|bottom"
+        android:layout_marginRight="@dimen/margin_medium_2"
+        />
+
+</android.support.design.widget.CoordinatorLayout>
