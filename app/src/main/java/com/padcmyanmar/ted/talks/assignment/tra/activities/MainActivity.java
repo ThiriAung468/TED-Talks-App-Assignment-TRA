@@ -13,6 +13,7 @@ import android.view.View;
 
 import com.padcmyanmar.ted.talks.assignment.tra.R;
 import com.padcmyanmar.ted.talks.assignment.tra.adapters.TedTalksAdapter;
+import com.padcmyanmar.ted.talks.assignment.tra.data.models.TalksModel;
 import com.padcmyanmar.ted.talks.assignment.tra.delegates.TedTalksItemDelegate;
 
 public class MainActivity extends BaseActivity implements TedTalksItemDelegate {
@@ -29,6 +30,7 @@ public class MainActivity extends BaseActivity implements TedTalksItemDelegate {
         rvTed.setLayoutManager(new LinearLayoutManager(getApplicationContext(),
                 LinearLayoutManager.VERTICAL,
                 false));
+        TalksModel.getObjInstance().loadTalksList();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
