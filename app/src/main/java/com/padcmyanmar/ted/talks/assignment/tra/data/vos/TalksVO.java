@@ -1,14 +1,30 @@
 package com.padcmyanmar.ted.talks.assignment.tra.data.vos;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class TalksVO {
+
+    @SerializedName("talk_id")
     private int talkId;
+
+    @SerializedName("title")
     private String title;
+
+    @SerializedName("speaker")
     private SpeakerVO speaker;
+
+    @SerializedName("imageUrl")
     private String imageUrl;
-    private String durationInSec;
+
+    @SerializedName("durationInSec")
+    private int durationInSec;
+
+    @SerializedName("description")
     private String description;
+
+    @SerializedName("tag")
     private List<TagVO> tag;
 
     public int getTalkId() {
@@ -27,7 +43,8 @@ public class TalksVO {
         return imageUrl;
     }
 
-    public String getDurationInSec() {
+    public int getDurationInSec() {
+
         return durationInSec;
     }
 

@@ -1,59 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
 
+    card_view:cardElevation="@dimen/margin_medium">
 
-    <ImageView
-        android:id="@+id/iv_ted_talks_img"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:src="@drawable/ted_talks_img"
-        android:scaleType="centerCrop"
-        android:layout_marginLeft="@dimen/margin_medium"
-        android:layout_marginRight="@dimen/margin_medium"
-        android:layout_marginTop="@dimen/margin_medium_2"
-       />
-    <TextView
-        android:id="@+id/tv_people_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cameron Russell"
-        android:textSize="@dimen/text_regular"
-        android:textColor="#FFFFFF"
-        android:layout_marginLeft="@dimen/margin_medium_3"
-        android:layout_marginTop="250dp"
-       />
-    <TextView
-        android:id="@+id/tv_say_topic"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Looks aren't everything. Believe me, I'm a model."
-        android:textSize="@dimen/text_regular_2x"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:layout_alignLeft="@id/tv_people_name"
-        android:layout_below="@id/tv_people_name"
-        />
-    <TextView
-        android:id="@+id/tv_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="14:05"
-        android:textColor="#FFFFFF"
-        android:textSize="@dimen/text_small"
-        android:layout_toRightOf="@id/tv_people_name"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="290dp"/>
-    <ImageView
-        android:id="@+id/iv_more_vert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_more_vert_write_24dp"
-        android:layout_toRightOf="@id/tv_people_name"
-        android:layout_marginLeft="210dp"
-        android:layout_marginTop="250dp"
+        android:layout_height="wrap_content">
 
-        />
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_ted_talks_img"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ted_talks_img" />
+
+        <TextView
+            android:id="@+id/tv_people_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_3"
+            android:layout_marginTop="250dp"
+            android:text="Cameron Russell"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tv_say_topic"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_people_name"
+            android:layout_below="@id/tv_people_name"
+            android:text="Looks aren't everything. Believe me, I'm a model."
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_more_vert"
+            android:layout_below="@id/iv_more_vert"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="14:05"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_small" />
+
+        <ImageView
+            android:id="@+id/iv_more_vert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="250dp"
+            android:src="@drawable/ic_more_vert_write_24dp"
+
+            />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
