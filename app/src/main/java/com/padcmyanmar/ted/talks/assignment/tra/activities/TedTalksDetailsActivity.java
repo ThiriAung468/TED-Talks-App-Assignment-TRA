@@ -13,6 +13,7 @@ import com.padcmyanmar.ted.talks.assignment.tra.R;
 import com.padcmyanmar.ted.talks.assignment.tra.adapters.TedTalksWatchNextAdapter;
 import com.padcmyanmar.ted.talks.assignment.tra.data.models.TalksModel;
 import com.padcmyanmar.ted.talks.assignment.tra.data.vos.TalksVO;
+import com.padcmyanmar.ted.talks.assignment.tra.utils.TalksConstants;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,11 +41,9 @@ public class TedTalksDetailsActivity extends BaseActivity {
         setContentView(R.layout.activity_ted_talks_details);
         ButterKnife.bind(this,this);
 
-        int talksId = getIntent().getIntExtra("talkId",1);
+        int talksId = getIntent().getIntExtra(TalksConstants.TALKS_ID,1);
         Log.d("TalksDetailsActivity", "talksId : " + talksId);
 
-        TalksVO talks = TalksModel.getObjInstance().getTalksById(talksId);
-        bindData(talks);
 
         RecyclerView rvTed = findViewById(R.id.rv_ted_talks_watch_next);
         TedTalksWatchNextAdapter tedTalksWatchNextAdapter = new TedTalksWatchNextAdapter();
@@ -53,6 +52,8 @@ public class TedTalksDetailsActivity extends BaseActivity {
                 LinearLayoutManager.VERTICAL,
                 false));
 
+        TalksVO talks = TalksModel.getObjInstance().getTalksById(talksId);
+        bindData(talks);
     }
 
     private void bindData(TalksVO talks) {

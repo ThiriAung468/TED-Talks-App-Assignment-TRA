@@ -18,6 +18,7 @@ import com.padcmyanmar.ted.talks.assignment.tra.data.models.TalksModel;
 import com.padcmyanmar.ted.talks.assignment.tra.data.vos.TalksVO;
 import com.padcmyanmar.ted.talks.assignment.tra.delegates.TedTalksItemDelegate;
 import com.padcmyanmar.ted.talks.assignment.tra.events.SuccessGetTalksEvent;
+import com.padcmyanmar.ted.talks.assignment.tra.utils.TalksConstants;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -88,7 +89,7 @@ public class MainActivity extends BaseActivity implements TedTalksItemDelegate {
     public void onTapItemView(TalksVO talks) {
         Intent intent = new Intent(getApplicationContext(),
                 TedTalksDetailsActivity.class);
-        intent.putExtra("talkId", talks.getTalkId() );
+        intent.putExtra(TalksConstants.TALKS_ID, talks.getTalkId() );
         startActivity(intent);
     }
 

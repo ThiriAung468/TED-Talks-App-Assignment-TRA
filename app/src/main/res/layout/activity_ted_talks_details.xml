@@ -88,12 +88,23 @@
                 android:layout_alignLeft="@id/tv_say_topic_details"
                 android:layout_below="@id/tv_say_topic_details"/>
 
+            <View
+                android:id="@+id/v_pipebreak"
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:background="@color/divider"
+                android:layout_below="@id/tv_say_topic_details"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_toRightOf="@+id/tv_time_details"
+                android:layout_marginTop="@dimen/margin_medium"
+                />
+
             <ImageView
                 android:id="@+id/iv_volume_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_volume_up_grey_18dp"
-                android:layout_toRightOf="@id/tv_time_details"
+                android:layout_toRightOf="@+id/v_pipebreak"
                 android:layout_below="@id/tv_say_topic_details"
                 android:layout_marginLeft="@dimen/margin_medium"
                 android:layout_marginTop="@dimen/margin_small"/>
